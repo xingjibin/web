@@ -1,0 +1,136 @@
+body{
+	background-color: #fff;
+}
+#id {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+#sosu {
+	width: 100%;
+	height: 5.5rem;
+	border: solid 1px #000;
+}
+#sosu span{
+	font-size: 1.8rem;
+	font-family: 宋体;
+	color:rgba(44, 43, 43, 0.74);
+	position: absolute;
+	top:2rem;
+	left: 4rem;	
+}
+/*#sosu input{
+	width: 200px;
+	height:20px;
+}*/
+#van {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	border: solid 1px #000;
+}
+#van span {
+	float: left;
+	font-size: 1.7rem;
+	font-family: 宋体;
+	margin-top: 2rem;
+	margin-left: 4rem;
+}
+#right {
+	width: 80%;
+	height:auto;
+	margin-left:0.5rem;
+	overflow: hidden;
+}
+#right ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+#right ul li {
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+	font-family: 宋体;
+	color: rgba(44, 43, 43, 0.74);
+	float: left;
+	font-size: 1.8rem;
+	margin-left: 1.5rem;
+	margin-top: 2rem;
+}
+#right ul li a:hover{
+	color:#FF5F15;
+}
+#right span {
+	overflow: hidden;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+    margin-left:15.5rem;
+    color:#FF5F15;
+}
+#right span a{
+	color: #FF5F15;
+}
+#top {
+	width: 100%;
+	height: 2.5rem;
+	background-color: #E8E8E8;
+}
+#as {
+	width: 100%;
+	height: 4rem;
+	border-bottom: solid 1px #ccc; 
+}
+#as span {
+	font-size: 1.5rem;
+	line-height: 3.5rem;
+	margin-left: 2rem;
+}
+.mn {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	border-bottom: solid 1px #ccc;
+}
+.mn h3 {
+	font-size: 1.8rem;
+	font-family: 宋体;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.mn h2 {
+	margin-top:-2rem;
+}
+	
+.mn h2 a {
+	color: #FF5F15;
+	margin-left: 48rem;
+	font-size: 1.8rem;
+}
+.mn a img {
+	width: 13rem;
+    height: auto;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+#jh{
+	width: 10rem;
+	overflow: hidden;
+	display: block;
+}
+#ki img{
+	border: solid 1px #f00;
+ 	border-radius: 3px;
+	
+}
+
+.footer{height: 7.2rem;width: 100%; background-color: #fff;position:fixed;bottom:0rem; z-index: 99;border-top: solid .01rem #ccc;} 
+.footer>ul{width: 100%;height: 100%;display: flex;}
+.footer>ul>li{float: left;margin-left: 4.45rem;height: 100%;width: 7rem;text-align: center;-webkit-box-flex: 1;-moz-box-flex: 1; margin-top: 0.5rem;}
+.footer>ul>li img{height: 3rem;width:3rem;}
+.footer>ul>li p{
+   font-size: 1.5rem;
+}
+
+
+

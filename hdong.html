@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/hdong.css"/>
+		<link rel="stylesheet" type="text/css" href="css/hdongstyle.css"/>
+	</head>
+	<body>
+		<!--<div id="nav">
+			<span id="a"><a href="javascipt:;" style="margin-top: 2remj;">在线服务</a></span>
+			<span id="b"><a href="javascipt:;">活动</a></span>
+			<span id="c"><a href="javascipt:;">我的礼品</a></span>
+		</div>
+		<div id="ji">
+			<img src="../手机端/img/a1.jpg">
+		</div>
+		<div id="ki">
+			<img src="../手机端/img/a3.jpg">
+		</div>
+		
+		<div class="footer">
+	 			<ul>
+	 				<li><a href="javascript:;"><img src="img/footImg01.png"/></a><p>首页</p></li>
+	 				<li><a href="javascript:;"><img src="img/footImg02.png"/></a><p>资讯</p></li>
+	 				<li><a href="javascript:;"><img src="img/footImg03.png" style="height: 6rem;width: 6rem;margin-top: -3rem;"/></a ><p style="margin-top: .1rem;">一键委托</p></li>
+	 				<li><a href="javascript:;"><img src="img/footImg04.png"/></a><p>活动</p></li>
+	 				<li><a href="javascript:;"><img src="img/footImg05.png"/></a><p>我的</p></li>
+	 			</ul>
+	 	</div>-->
+	 	<header id="head">
+			<hgroup>
+				<a class="head_a1" href="#">在线客服</a>
+				<a class="head_a2">活动</a>
+				<a class="head_a3" href="#">我的礼品</a>
+			</hgroup>
+		</header>
+		<figure id="banner">
+			<img src="../手机端/img/a1.jpg">
+		</figure>
+		<div id="ki">
+			<img src="../手机端/img/a3.jpg">
+		</div>
+		<section id="content">
+			<article class="cont_art">
+		    	<p class="cont_p1"></p>
+		    	<h3>往期活动</h3>
+		    	<p class="cont_p2"></p>
+			</article>
+			<div class="cont_con">
+				<p class="contc_ptop"></p>
+				<img src="../手机端/img/a3.jpg">
+				<p class="contc_pbot">
+					<span>春天就要来了，踏青走起！</span>
+				    <span>已结束</span>
+				</p>
+				<h2>往期活动</h2>
+			</div>
+			<div class="cont_con">
+				<p class="contc_ptop"></p>
+				<img src="../手机端/img/a3.jpg">
+				<p class="contc_pbot">
+					<span>春天就要来了，踏青走起！</span>
+				    <span>已结束</span>
+				</p>
+				<h2>往期活动</h2>
+			</div>
+			<div class="cont_con">
+				<p class="contc_ptop"></p>
+				<img src="../手机端/img/a3.jpg">
+				<p class="contc_pbot">
+					<span>春天就要来了，踏青走起！</span>
+				    <span>已结束</span>
+				</p>
+				<h2>往期活动</h2>
+			</div>
+			<div class="cont_con">
+				<p class="contc_ptop"></p>
+				<img src="../手机端/img/a3.jpg">
+				<p class="contc_pbot">
+					<span>春天就要来了，踏青走起！</span>
+				    <span>已结束</span>
+				</p>
+				<h2>往期活动</h2>
+			</div>
+			<div class="cont_con">
+				<p class="contc_ptop"></p>
+				<img src="../手机端/img/a3.jpg">
+				<p class="contc_pbot">
+					<span>春天就要来了，踏青走起！</span>
+				    <span>已结束</span>
+				</p>
+				<h2>往期活动</h2>
+			</div>
+			<div class="cont_con">
+				<p class="contc_ptop"></p>
+				<img src="../手机端/img/a3.jpg">
+				<p class="contc_pbot">
+					<span>春天就要来了，踏青走起！</span>
+				    <span>已结束</span>
+				</p>
+				<h2>往期活动</h2>
+			</div>
+			<div class="cont_con">
+				<p class="contc_ptop"></p>
+				<img src="../手机端/img/a3.jpg">
+				<p class="contc_pbot">
+					<span>春天就要来了，踏青走起！</span>
+				    <span>已结束</span>
+				</p>
+				<h2>往期活动</h2>
+			</div>
+		</section>
+		<div class="footer">
+	 			<ul>
+	 				<li><a href="javascript:;"><img src="img/footImg01.png"/></a><p>首页</p></li>
+	 				<li><a href="javascript:;"><img src="img/footImg02.png"/></a><p>资讯</p></li>
+	 				<li><a href="javascript:;"><img src="img/footImg03.png" style="height: 6rem;width: 6rem;margin-top: -3rem;"/></a ><p style="margin-top: .1rem;">一键委托</p></li>
+	 				<li><a href="javascript:;"><img src="img/footImg04.png"/></a><p>活动</p></li>
+	 				<li><a href="javascript:;"><img src="img/footImg05.png"/></a><p>我的</p></li>
+	 			</ul>
+	 	</div>
+	</body>
+</html>
+<script>
+window.onresize=r;
+function r(resizeNum){
+	var winW=window.innerwidth;
+	document.getElementsByTagName("html")[0].style.fontSize=winW*0.15625+"px";
+	if(winW>window.screen.width&&resizeNum<=10){
+		setTimeout(function(){
+			r(++resizeNum);
+		},100);
+	}else{
+		document.getElementsByTagName("body")[0].style.opacity=1;
+	}
+}
+setTimeout(r(0),100);
+	</body>
+</html>

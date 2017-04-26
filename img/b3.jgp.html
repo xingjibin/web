@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://weixin.xfj100.com/wx_esf -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>买二手房</title>
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta name="Keywords" content="二手房，新房，珠海房产，幸福家">
+<meta name="Description" content="二手房，新房，珠海房产，幸福家">
+<!-- Mobile Devices Support @begin -->
+
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- apple devices fullscreen -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Mobile Devices Support @end -->
+
+<link rel="shortcut icon" href="http://weixin.xfj100.com/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./b3.jgp_files/newweixin.css">
+
+<link rel="stylesheet" href="./b3.jgp_files/xfj-icon.css">
+
+<script src="./b3.jgp_files/hm.js.下载"></script><script src="./b3.jgp_files/jquery-1.7.2.min.js.下载"></script>
+<script src="./b3.jgp_files/jquery.lazyload.min.js.下载"></script>
+<script src="./b3.jgp_files/rolltop.js.下载"></script>
+
+<!-- 微信分享方法 -->
+<script src="./b3.jgp_files/getShareSdkJs"></script>
+<script type="text/javascript" src="./b3.jgp_files/shareUtil.js.下载"></script>
+<!-- 微信分享参数 -->
+<script type="text/javascript">
+	initShare({
+		own:true,
+		title:"珠海最新二手房信息查询！",
+		desc:"找二手房，上幸福家就有啦！",
+		img:"http://xfj-image.oss-cn-hangzhou.aliyuncs.com/uploads/2016/0324/0fc7df78-247c-4061-a0a7-fdfdcd0d1aac.png",
+		link:"http://weixin.xfj100.com/wx_esf/salelist?city_id=756",
+	    success:function(data){
+	    }
+	});
+</script>
+<style type="text/css">
+	.search_bg_color {
+	    color: #ed3012;
+	}
+	.search_house_bg_color{
+	   color: #ed3012;
+	}
+	
+	 .search_mian_bg_color{
+	   color: #ed3012;
+	 } 
+	 
+	 .search_price_bg_color{
+	   color: #ed3012;
+	 }
+	.fu_tin {
+	    background: rgba(0, 0, 0, 0) url("http://xfj-image.oss-cn-hangzhou.aliyuncs.com/uploads/2015/1029/1446127045941083441.png") no-repeat scroll center top / 100% auto;
+	    height: 170px;
+	    line-height: 26px;
+	    margin: 10% auto 0;
+	    overflow: hidden;
+	    padding: 30px 0 0;
+	    text-align: center;
+	    width: 260px;
+	}
+	.fu_tin strong {
+	    color: #ed3012;
+	    font-size: 16px;
+	    line-height: 36px;
+	}
+	.select_block .box_up div{ display:none;}
+	.select_block .box_up div:nth-child(1),.select_block .box_up div:nth-child(2){ display:block;}
+	.load_more {
+	    color: #999;
+	    display: block;
+	    font-size: 15px;
+	    padding: 5px 0 20px;
+	    text-align: center;
+	}
+</style>
+</head>
+<body>
+	<div class="ibox">
+		<div class="box box_up" id="search_info">
+			<div><strong>搜索：</strong>
+					<input name="" type="text" id="key_word" style="color:gray" value="输入关键字" onfocus="if(this.value==&#39;输入关键字&#39;){this.value=&#39;&#39;};this.style.color=&#39;#333&#39;;" onblur="if(this.value==&#39;&#39;||this.value==&#39;输入关键字&#39;){this.value=&#39;输入关键字&#39;;this.style.color=&#39;#999&#39;;}">
+					<input type="button" onclick="serach_info()" value="" class="a_btn">
+			</div>
+			<div><strong>区域：</strong>
+				<ul>
+					<li class="search_bg_color" exec-name="li-find" plus-param="0">全部</li>
+			        			        				        	<li exec-name="li-find" plus-param="中山">中山</li> 
+			        				        	<li exec-name="li-find" plus-param="拱北">拱北</li> 
+			        				        	<li exec-name="li-find" plus-param="老香洲">老香洲</li> 
+			        				        	<li exec-name="li-find" plus-param="新香洲">新香洲</li> 
+			        				        	<li exec-name="li-find" plus-param="吉大">吉大</li> 
+			        				        	<li exec-name="li-find" plus-param="前山">前山</li> 
+			        				        	<li exec-name="li-find" plus-param="夏湾">夏湾</li> 
+			        				        	<li exec-name="li-find" plus-param="上冲">上冲</li> 
+			        				        	<li exec-name="li-find" plus-param="柠溪">柠溪</li> 
+			        				        	<li exec-name="li-find" plus-param="兰埔">兰埔</li> 
+			        				        	<li exec-name="li-find" plus-param="南屏">南屏</li> 
+			        				        	<li exec-name="li-find" plus-param="南湾">南湾</li> 
+			        				        	<li exec-name="li-find" plus-param="唐家">唐家</li> 
+			        				        	<li exec-name="li-find" plus-param="金鼎">金鼎</li> 
+			        				        	<li exec-name="li-find" plus-param="横琴">横琴</li> 
+			        				        	<li exec-name="li-find" plus-param="湾仔">湾仔</li> 
+			        				        	<li exec-name="li-find" plus-param="斗门">斗门</li> 
+			        				        	<li exec-name="li-find" plus-param="井岸">井岸</li> 
+			        				        	<li exec-name="li-find" plus-param="金湾">金湾</li> 
+			        				        	<li exec-name="li-find" plus-param="坦洲">坦洲</li> 
+			        				        	<li exec-name="li-find" plus-param="三乡">三乡</li> 
+			        				        	<li exec-name="li-find" plus-param="南朗">南朗</li> 
+			        				        	<li exec-name="li-find" plus-param="五桂山">五桂山</li> 
+			        				        	<li exec-name="li-find" plus-param="神湾">神湾</li> 
+			        				        	<li exec-name="li-find" plus-param="其他">其他</li> 
+			        				        	<li exec-name="li-find" plus-param="中山板芙 ">中山板芙 </li> 
+			        				        			      </ul>
+			</div>
+			<div><strong>户型：</strong>
+				<ul>
+					<li class="search_house_bg_color" exec-name="house-find" plus-param="0">全部</li>
+					<li exec-name="house-find" plus-param="1">1房</li>
+					<li exec-name="house-find" plus-param="2">2房</li>
+					<li exec-name="house-find" plus-param="3">3房</li>
+					<li exec-name="house-find" plus-param="4">4房</li>
+					<li exec-name="house-find" plus-param="5">5房</li>
+					<li exec-name="house-find" plus-param="6">5房↑</li>
+				</ul>
+			</div>
+			<div><strong>面积：</strong>
+				<ul>
+					<li class="search_mian_bg_color" exec-name="mian-find" plus-param="0">全部</li>
+					<li exec-name="mian-find" plus-param="0-80">80㎡↓</li>
+					<li exec-name="mian-find" plus-param="80-120">80-120㎡</li>
+					<li exec-name="mian-find" plus-param="120-180">120-180㎡</li>
+					<li exec-name="mian-find" plus-param="180-260">180-260㎡</li>
+					<li exec-name="mian-find" plus-param="260-300">260-300㎡</li>
+					<li exec-name="mian-find" plus-param="300-10000">300㎡↑</li>
+				</ul>
+			</div>
+			<div><strong>总价：</strong>
+				<ul>
+					<li class="search_price_bg_color" exec-name="price-find" plus-param="0">全部</li>
+						<li exec-name="price-find" plus-param="0-30">30万↓</li>
+		<li exec-name="price-find" plus-param="30-50">30-50万</li>
+		<li exec-name="price-find" plus-param="50-80">50-80万</li>
+		<li exec-name="price-find" plus-param="80-120">80-120万</li>
+		<li exec-name="price-find" plus-param="120-200">120-200万</li>
+		<li exec-name="price-find" plus-param="200-10000">200万↑</li>
+					</ul>
+			</div>
+			<!-- 
+			<div class="relative"><strong>类型：</strong>
+				<ul>
+					<li class="search_type_bg_color" exec-name="type-find" plus-param="0">全部</li>
+					<li exec-name="type-find" plus-param="1">住宅</li>
+					<li exec-name="type-find" plus-param="2">商铺</li>
+					<li exec-name="type-find" plus-param="3">写字楼</li>
+				</ul>
+			</div>
+			 -->
+		</div>
+		<a onclick="change_view()" href="javascript:void(0);" class="loadmore_btn" id="flod_text"><span> <i class="down_icon"></i>查看更多</span></a>
+		<input name="" type="hidden" id="area_id" value="0">
+		<input name="" type="hidden" id="type_name" value="0">
+		<input name="" type="hidden" id="house_num" value="0">
+		<input name="" type="hidden" id="mian_num" value="0">
+		<input name="" type="hidden" id="price_num" value="0">
+		<input name="" type="hidden" id="page" value="0">
+	</div>
+	<div class="ibox">
+		<div class="ibox-title block_title">根据条件一共有<span id="show_num">436</span>套房源</div>
+		<!-- 列表显示 -->
+		<div id="view_list" class="esindex_line">
+				<a id="982" href="http://weixin.xfj100.com/wx_esf/saleIndex/982" onclick="change_scroll(982)">
+    <h3 class="text_ellipsis">海逸雍雅堡 6房  564.0平米</h3>
+    <h2>2980-3020万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_1578.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_1578.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_ec51813c-bd64-4dbd-99c7-70ed439e5e48.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_ec51813c-bd64-4dbd-99c7-70ed439e5e48.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_645383d5-a136-4700-b1a1-f31ef531d2ee.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_645383d5-a136-4700-b1a1-f31ef531d2ee.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">28</strong>套</li>
+    </ul>
+    </a>
+    		<a id="2096" href="http://weixin.xfj100.com/wx_esf/saleIndex/2096" onclick="change_scroll(2096)">
+    <h3 class="text_ellipsis">凤凰谷 6房  652.0平米</h3>
+    <h2>1980-2020万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_4295.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_4295.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_9620b74a-8e77-48b8-a0e7-6d02c65ac127.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_9620b74a-8e77-48b8-a0e7-6d02c65ac127.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_6015bb56-6d29-49d5-a9a5-039f173e32e5.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">26</strong>套</li>
+    </ul>
+    </a>
+    		<a id="5039" href="http://weixin.xfj100.com/wx_esf/saleIndex/5039" onclick="change_scroll(5039)">
+    <h3 class="text_ellipsis">锦绣海湾城别墅 6房  300平</h3>
+    <h2>350-390万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0719/detail_16660.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_16660.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_2a9a7ef3-9e8d-4ce7-b8ea-c9a4b2d9afcb.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_2a9a7ef3-9e8d-4ce7-b8ea-c9a4b2d9afcb.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_fd1c7aa2-de5c-4c58-a256-7560979d1192.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_fd1c7aa2-de5c-4c58-a256-7560979d1192.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">25</strong>套</li>
+    </ul>
+    </a>
+    		<a id="1258" href="http://weixin.xfj100.com/wx_esf/saleIndex/1258" onclick="change_scroll(1258)">
+    <h3 class="text_ellipsis">山海一品海岸花园 6房  182.0平米</h3>
+    <h2>498-538万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_2133.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_2133.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_0ed71d91-3c0e-43e3-8afe-79525bbd76fa.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_0ed71d91-3c0e-43e3-8afe-79525bbd76fa.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_a0d3d06f-43e3-4510-8a6e-e7779f5e0ec6.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_a0d3d06f-43e3-4510-8a6e-e7779f5e0ec6.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">21</strong>套</li>
+    </ul>
+    </a>
+    		<a id="269" href="http://weixin.xfj100.com/wx_esf/saleIndex/269" onclick="change_scroll(269)">
+    <h3 class="text_ellipsis">时代廊桥别墅 6房  265.0平米</h3>
+    <h2>560-600万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0620/detail_326.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_326.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_cd2ec321-e18b-421f-820a-c469f2896e4f.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_cd2ec321-e18b-421f-820a-c469f2896e4f.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_5f890892-1df9-4764-a67b-d0e89671fc22.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_5f890892-1df9-4764-a67b-d0e89671fc22.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">20</strong>套</li>
+    </ul>
+    </a>
+    		<a id="31514" href="http://weixin.xfj100.com/wx_esf/saleIndex/31514" onclick="change_scroll(31514)">
+    <h3 class="text_ellipsis">中海银海湾 6房  50.0平</h3>
+    <h2>1560-1600万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0101/detail_138828.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_138828.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_1ba0fc2d-9168-4c82-b8df-706c1ac28f8f.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_1ba0fc2d-9168-4c82-b8df-706c1ac28f8f.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_6eaa679a-f5af-462d-8d9c-add2c903851d.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_6eaa679a-f5af-462d-8d9c-add2c903851d.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">20</strong>套</li>
+    </ul>
+    </a>
+    		<a id="2890" href="http://weixin.xfj100.com/wx_esf/saleIndex/2890" onclick="change_scroll(2890)">
+    <h3 class="text_ellipsis">云顶澜山 6房  224.0平米</h3>
+    <h2>360-400万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_7317.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_7317.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_51f237fe-4b0e-4dff-9159-cd56a8e42d44.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_51f237fe-4b0e-4dff-9159-cd56a8e42d44.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_2759680f-d30c-4e04-b4ec-559e37a36d0b.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_2759680f-d30c-4e04-b4ec-559e37a36d0b.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">19</strong>套</li>
+    </ul>
+    </a>
+    		<a id="2789" href="http://weixin.xfj100.com/wx_esf/saleIndex/2789" onclick="change_scroll(2789)">
+    <h3 class="text_ellipsis">锦绣海湾城 6房  305.0平米</h3>
+    <h2>360-400万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_6832.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_6832.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_0618a78b-4e1a-4e13-8b22-f2efa5731660.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_0618a78b-4e1a-4e13-8b22-f2efa5731660.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_af95cb74-1489-43fb-b2c7-8e61e132bf9b.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_af95cb74-1489-43fb-b2c7-8e61e132bf9b.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">17</strong>套</li>
+    </ul>
+    </a>
+    		<a id="30589" href="http://weixin.xfj100.com/wx_esf/saleIndex/30589" onclick="change_scroll(30589)">
+    <h3 class="text_ellipsis">中澳春城 6房  19.0平</h3>
+    <h2>238-278万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0101/detail_136765.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_136765.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_d0c324f2-8129-448d-a1e6-6d2aa96be19a.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_d0c324f2-8129-448d-a1e6-6d2aa96be19a.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_261941d5-e757-4fde-97ce-e3a802c27772.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_261941d5-e757-4fde-97ce-e3a802c27772.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">17</strong>套</li>
+    </ul>
+    </a>
+    		<a id="1524" href="http://weixin.xfj100.com/wx_esf/saleIndex/1524" onclick="change_scroll(1524)">
+    <h3 class="text_ellipsis">锦绣海湾城 6房  293.0平米</h3>
+    <h2>360-400万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_2750.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_2750.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_436c0055-7356-4610-94d7-d19fc2ce383b.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_436c0055-7356-4610-94d7-d19fc2ce383b.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_8cbdd5a4-6729-43ae-85d9-1491c226f728.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_8cbdd5a4-6729-43ae-85d9-1491c226f728.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">16</strong>套</li>
+    </ul>
+    </a>
+    		<a id="1544" href="http://weixin.xfj100.com/wx_esf/saleIndex/1544" onclick="change_scroll(1544)">
+    <h3 class="text_ellipsis">中信红树湾 6房  280.0平米</h3>
+    <h2>1680-1720万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_2823.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_2823.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_d96980e3-1968-4651-9f41-71162de7bd82.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_d96980e3-1968-4651-9f41-71162de7bd82.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_f3497b15-c56a-4234-a6b5-feb7f9ce48bf.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_f3497b15-c56a-4234-a6b5-feb7f9ce48bf.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">16</strong>套</li>
+    </ul>
+    </a>
+    		<a id="3875" href="http://weixin.xfj100.com/wx_esf/saleIndex/3875" onclick="change_scroll(3875)">
+    <h3 class="text_ellipsis">中澳春城 6房  199.0平米</h3>
+    <h2>229-269万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0623/detail_12007.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_12007.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_b0bb5731-68dc-4a15-a364-b31301e05b4f.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_b0bb5731-68dc-4a15-a364-b31301e05b4f.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_d007b035-af19-4161-aaf8-b55e53114565.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_d007b035-af19-4161-aaf8-b55e53114565.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">16</strong>套</li>
+    </ul>
+    </a>
+    		<a id="1395" href="http://weixin.xfj100.com/wx_esf/saleIndex/1395" onclick="change_scroll(1395)">
+    <h3 class="text_ellipsis">名爵观园 6房  316.0平米</h3>
+    <h2>378-418万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_2442.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_2442.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_5da1372f-ddc4-46b4-a821-cab19752ae09.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_5da1372f-ddc4-46b4-a821-cab19752ae09.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_b22e41ce-93cc-414f-be12-407de484f046.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_b22e41ce-93cc-414f-be12-407de484f046.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">15</strong>套</li>
+    </ul>
+    </a>
+    		<a id="6224" href="http://weixin.xfj100.com/wx_esf/saleIndex/6224" onclick="change_scroll(6224)">
+    <h3 class="text_ellipsis">华发蔚蓝堡 6房  170平</h3>
+    <h2>490-530万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0719/detail_25084.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_25084.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_15e2883e-cf23-48ee-b0d9-a7d3dd437e54.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_15e2883e-cf23-48ee-b0d9-a7d3dd437e54.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_784717cf-d2dc-4044-b5f9-537d1fe2f3d1.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_784717cf-d2dc-4044-b5f9-537d1fe2f3d1.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">15</strong>套</li>
+    </ul>
+    </a>
+    		<a id="4257" href="http://weixin.xfj100.com/wx_esf/saleIndex/4257" onclick="change_scroll(4257)">
+    <h3 class="text_ellipsis">凤凰谷 6房  400平</h3>
+    <h2>2005-2045万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0630/detail_13980.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_13980.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_c1d9c5a4-7028-4a3f-abcf-0551badfbe96.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_c1d9c5a4-7028-4a3f-abcf-0551badfbe96.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_7c89fc4e-4b76-4a0d-9179-7654e7fcb985.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_7c89fc4e-4b76-4a0d-9179-7654e7fcb985.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">13</strong>套</li>
+    </ul>
+    </a>
+    		<a id="41341" href="http://weixin.xfj100.com/wx_esf/saleIndex/41341" onclick="change_scroll(41341)">
+    <h3 class="text_ellipsis">凤凰谷 6房  65.0平</h3>
+    <h2>2059-2099万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0120/detail_168305.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_168305.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_425cabac-449a-417c-b0f9-1edb6c6b3051.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_425cabac-449a-417c-b0f9-1edb6c6b3051.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_597bc08b-25de-4d45-83d5-405d172de1c7.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_597bc08b-25de-4d45-83d5-405d172de1c7.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">13</strong>套</li>
+    </ul>
+    </a>
+    		<a id="2098" href="http://weixin.xfj100.com/wx_esf/saleIndex/2098" onclick="change_scroll(2098)">
+    <h3 class="text_ellipsis">中海银海湾 6房  316.0平米</h3>
+    <h2>1148-1188万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_4299.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_4299.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_ab8548c5-a083-4916-8e68-9f78edc16daf.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_ab8548c5-a083-4916-8e68-9f78edc16daf.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_8cd065c3-8288-42e4-ae9d-a1cdb6b225b2.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_8cd065c3-8288-42e4-ae9d-a1cdb6b225b2.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">12</strong>套</li>
+    </ul>
+    </a>
+    		<a id="4152" href="http://weixin.xfj100.com/wx_esf/saleIndex/4152" onclick="change_scroll(4152)">
+    <h3 class="text_ellipsis">海逸雍雅堡 6房  400平</h3>
+    <h2>2360-2400万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0630/detail_13500.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_13500.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_b482922c-bd6d-4fbf-b31e-8183fbfc2264.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_b482922c-bd6d-4fbf-b31e-8183fbfc2264.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_4bfa0e09-61cc-4323-b0a5-3330ea4c1390.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_4bfa0e09-61cc-4323-b0a5-3330ea4c1390.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">12</strong>套</li>
+    </ul>
+    </a>
+    		<a id="5999" href="http://weixin.xfj100.com/wx_esf/saleIndex/5999" onclick="change_scroll(5999)">
+    <h3 class="text_ellipsis">中海银海湾 6房  400平</h3>
+    <h2>1138-1178万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0719/detail_23270.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_23270.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_cb549c6f-6523-4c1f-bbfd-b6bd5af3fcf3.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_cb549c6f-6523-4c1f-bbfd-b6bd5af3fcf3.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_599efc22-f68b-4aec-9405-3ab6768fdfcf.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_599efc22-f68b-4aec-9405-3ab6768fdfcf.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">12</strong>套</li>
+    </ul>
+    </a>
+    		<a id="3630" href="http://weixin.xfj100.com/wx_esf/saleIndex/3630" onclick="change_scroll(3630)">
+    <h3 class="text_ellipsis">云山诗意 6房  393.92平米</h3>
+    <h2>880-920万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0623/detail_10608.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_10608.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_d6fd26a0-a6fa-45bd-a8c2-0d949bd1ea1d.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_d6fd26a0-a6fa-45bd-a8c2-0d949bd1ea1d.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_4a4f60a7-2044-44ab-b56d-347dba667728.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_4a4f60a7-2044-44ab-b56d-347dba667728.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">11</strong>套</li>
+    </ul>
+    </a>
+    		<a id="459" href="http://weixin.xfj100.com/wx_esf/saleIndex/459" onclick="change_scroll(459)">
+    <h3 class="text_ellipsis">景山茗园 6房  242.24平米</h3>
+    <h2>680-720万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0620/detail_606.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_606.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_38aa72a1-6010-4959-9e50-6b153986072d.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_38aa72a1-6010-4959-9e50-6b153986072d.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_54e9b095-306a-4f11-ae6e-f380f46f2de7.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_54e9b095-306a-4f11-ae6e-f380f46f2de7.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">10</strong>套</li>
+    </ul>
+    </a>
+    		<a id="2928" href="http://weixin.xfj100.com/wx_esf/saleIndex/2928" onclick="change_scroll(2928)">
+    <h3 class="text_ellipsis">华发峰景湾 6房  660.0平米</h3>
+    <h2>2560-2600万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_7480.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_7480.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_9fd3a393-8a1d-4090-bcf0-b3b1c8bcdd8e.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_9fd3a393-8a1d-4090-bcf0-b3b1c8bcdd8e.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_9ad82632-0031-4579-8fd2-e62eb1eb7624.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_9ad82632-0031-4579-8fd2-e62eb1eb7624.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">10</strong>套</li>
+    </ul>
+    </a>
+    		<a id="3018" href="http://weixin.xfj100.com/wx_esf/saleIndex/3018" onclick="change_scroll(3018)">
+    <h3 class="text_ellipsis">海逸雍雅堡 6房  253.0平米</h3>
+    <h2>700-740万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_7832.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_7832.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_3c76fbc9-f21d-494c-b632-9491e69306fa.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_3c76fbc9-f21d-494c-b632-9491e69306fa.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_ddc6fbe3-e72f-41ed-afdc-b6ed1d84565c.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_ddc6fbe3-e72f-41ed-afdc-b6ed1d84565c.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">10</strong>套</li>
+    </ul>
+    </a>
+    		<a id="3845" href="http://weixin.xfj100.com/wx_esf/saleIndex/3845" onclick="change_scroll(3845)">
+    <h3 class="text_ellipsis">华发山庄 6房  260.84平米</h3>
+    <h2>770-810万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0623/detail_11811.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_11811.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_58ab2b43-7878-4c32-897a-b7ae8f5c6cfe.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_58ab2b43-7878-4c32-897a-b7ae8f5c6cfe.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_60339918-6911-4a02-a8a3-9e1783d25d85.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_60339918-6911-4a02-a8a3-9e1783d25d85.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">10</strong>套</li>
+    </ul>
+    </a>
+    		<a id="4135" href="http://weixin.xfj100.com/wx_esf/saleIndex/4135" onclick="change_scroll(4135)">
+    <h3 class="text_ellipsis">港珠湾山庄 6房  500平以上</h3>
+    <h2>15980-16020万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0630/detail_13381.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_13381.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_d6fa38e0-eab4-40a3-9839-b6577073d722.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_d6fa38e0-eab4-40a3-9839-b6577073d722.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_a28ad0cf-b628-4887-9b0d-676ea281b0be.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_a28ad0cf-b628-4887-9b0d-676ea281b0be.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">9</strong>套</li>
+    </ul>
+    </a>
+    		<a id="5421" href="http://weixin.xfj100.com/wx_esf/saleIndex/5421" onclick="change_scroll(5421)">
+    <h3 class="text_ellipsis">中信红树湾别墅 6房  200平</h3>
+    <h2>1480-1520万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0719/detail_19101.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_19101.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_211b9972-74b2-4827-8c54-7699cd0e440c.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_211b9972-74b2-4827-8c54-7699cd0e440c.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_cb1c1875-fbc1-4cbb-84dd-11563d8ee1eb.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_cb1c1875-fbc1-4cbb-84dd-11563d8ee1eb.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">9</strong>套</li>
+    </ul>
+    </a>
+    		<a id="5831" href="http://weixin.xfj100.com/wx_esf/saleIndex/5831" onclick="change_scroll(5831)">
+    <h3 class="text_ellipsis">山海一品海岸花园别墅 6房  170平</h3>
+    <h2>492-532万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0719/detail_22044.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_22044.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_86bcb618-4cad-4cc1-b3c8-fb1f14493355.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_86bcb618-4cad-4cc1-b3c8-fb1f14493355.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_5228cd98-1e49-4ffd-8689-8ffde473b1eb.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_5228cd98-1e49-4ffd-8689-8ffde473b1eb.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">9</strong>套</li>
+    </ul>
+    </a>
+    		<a id="5864" href="http://weixin.xfj100.com/wx_esf/saleIndex/5864" onclick="change_scroll(5864)">
+    <h3 class="text_ellipsis">港珠湾山庄 6房  400平</h3>
+    <h2>2180-2220万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0719/detail_22218.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_22218.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_9bf28861-6f91-4c42-a2da-fe10ebb55c0e.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_9bf28861-6f91-4c42-a2da-fe10ebb55c0e.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_b82a444b-6059-4462-85bc-86506a513384.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_b82a444b-6059-4462-85bc-86506a513384.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">9</strong>套</li>
+    </ul>
+    </a>
+    		<a id="31825" href="http://weixin.xfj100.com/wx_esf/saleIndex/31825" onclick="change_scroll(31825)">
+    <h3 class="text_ellipsis">山海一品海岸花园 6房  17.0平</h3>
+    <h2>498-538万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0101/detail_139484.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_139484.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_4019adda-55e2-48ad-9c39-3c501d1386c3.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_4019adda-55e2-48ad-9c39-3c501d1386c3.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_c8d87059-9f8e-480e-b649-9fe71d107e29.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_c8d87059-9f8e-480e-b649-9fe71d107e29.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">9</strong>套</li>
+    </ul>
+    </a>
+    		<a id="36721" href="http://weixin.xfj100.com/wx_esf/saleIndex/36721" onclick="change_scroll(36721)">
+    <h3 class="text_ellipsis">德昌盛景 6房  22.0平</h3>
+    <h2>348-388万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0103/detail_152906.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_152906.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_522da0b5-f13a-43aa-9ed3-38e64c478349.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_522da0b5-f13a-43aa-9ed3-38e64c478349.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_45ded959-eeff-4121-96e9-6655471c5984.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_45ded959-eeff-4121-96e9-6655471c5984.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">9</strong>套</li>
+    </ul>
+    </a>
+    		<a id="236" href="http://weixin.xfj100.com/wx_esf/saleIndex/236" onclick="change_scroll(236)">
+    <h3 class="text_ellipsis">华发新城五期 6房  310.0平米</h3>
+    <h2>820-860万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0620/detail_285.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_285.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_fb909bce-d417-40c2-99de-595ca9883bb3.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_fb909bce-d417-40c2-99de-595ca9883bb3.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_30d1cac7-3266-4659-b119-75cb7415da53.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_30d1cac7-3266-4659-b119-75cb7415da53.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="1264" href="http://weixin.xfj100.com/wx_esf/saleIndex/1264" onclick="change_scroll(1264)">
+    <h3 class="text_ellipsis">锦绣海湾城别墅 6房  234.0平米</h3>
+    <h2>155-195万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_2160.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_2160.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_adfa06d3-bbde-4d0c-85f9-8b9ac1436fe6.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_adfa06d3-bbde-4d0c-85f9-8b9ac1436fe6.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_8835a217-10b6-43db-88de-3286577d5919.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_8835a217-10b6-43db-88de-3286577d5919.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="2097" href="http://weixin.xfj100.com/wx_esf/saleIndex/2097" onclick="change_scroll(2097)">
+    <h3 class="text_ellipsis">中海银海湾 6房  506.0平米</h3>
+    <h2>1295-1335万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_4296.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_4296.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_05dff44b-3b82-4621-8b50-cdad276b9325.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_05dff44b-3b82-4621-8b50-cdad276b9325.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_9c6c84a1-ca62-45ca-9b3e-3bd4d7e2e030.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_9c6c84a1-ca62-45ca-9b3e-3bd4d7e2e030.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="2116" href="http://weixin.xfj100.com/wx_esf/saleIndex/2116" onclick="change_scroll(2116)">
+    <h3 class="text_ellipsis">华发山庄 6房  382.32平米</h3>
+    <h2>978-1018万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_4374.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_4374.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_1e673427-c3e6-4adc-a353-458d90c0bf94.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_1e673427-c3e6-4adc-a353-458d90c0bf94.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_cf87aab9-537c-4781-8adf-300d2a4e8c8b.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_cf87aab9-537c-4781-8adf-300d2a4e8c8b.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="3575" href="http://weixin.xfj100.com/wx_esf/saleIndex/3575" onclick="change_scroll(3575)">
+    <h3 class="text_ellipsis">钰海山庄 6房  271.0平米</h3>
+    <h2>580-620万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0623/detail_10397.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_10397.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_671022a8-9eee-47b4-bfa0-9465cbaaf4db.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_671022a8-9eee-47b4-bfa0-9465cbaaf4db.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_49990568-9961-453a-bb1a-4f7bbb7758b9.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_49990568-9961-453a-bb1a-4f7bbb7758b9.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="3652" href="http://weixin.xfj100.com/wx_esf/saleIndex/3652" onclick="change_scroll(3652)">
+    <h3 class="text_ellipsis">浩益花园 6房  169.0平米</h3>
+    <h2>220-260万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0623/detail_10678.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_10678.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0623/detail_10677.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/detail_10677.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_73755505-262d-4bac-ad3d-0396ac891be1.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/index_73755505-262d-4bac-ad3d-0396ac891be1.jpg@120w_100Q_1x.jpg" style="display: block;"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="7627" href="http://weixin.xfj100.com/wx_esf/saleIndex/7627" onclick="change_scroll(7627)">
+    <h3 class="text_ellipsis">中海银海湾别墅 6房  400平</h3>
+    <h2>968-1008万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0719/detail_39485.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_f58d5999-0404-496c-9ca0-767dd8752fc3.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_f4f93511-6f75-421d-b16a-c0d970a3db8b.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="33299" href="http://weixin.xfj100.com/wx_esf/saleIndex/33299" onclick="change_scroll(33299)">
+    <h3 class="text_ellipsis">凤凰谷 6房  50.0平</h3>
+    <h2>1980-2020万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0101/detail_143006.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_b37739a7-50fc-47ec-b56e-5fcb2f73c149.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_e38a6492-2f95-4065-9067-1825e8608245.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="33312" href="http://weixin.xfj100.com/wx_esf/saleIndex/33312" onclick="change_scroll(33312)">
+    <h3 class="text_ellipsis">凤凰山一号 6房  24.0平</h3>
+    <h2>580-620万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0101/detail_143055.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_6d680f50-992f-4a0c-98e7-994fd1e39f41.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_57efd63a-64d4-4230-a36e-b998c8844a77.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="37186" href="http://weixin.xfj100.com/wx_esf/saleIndex/37186" onclick="change_scroll(37186)">
+    <h3 class="text_ellipsis">华发新城五期 6房  42.0平</h3>
+    <h2>1445-1485万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_690318c5-96e2-4108-8fd2-701ad0944d4b.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_30e7e8f9-c0b3-4c05-b9b4-ad9aeaf21e42.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0119/detail_158929.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">8</strong>套</li>
+    </ul>
+    </a>
+    		<a id="237" href="http://weixin.xfj100.com/wx_esf/saleIndex/237" onclick="change_scroll(237)">
+    <h3 class="text_ellipsis">海怡湾畔 6房  335.0平米</h3>
+    <h2>440-480万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0620/detail_286.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_d7b9f07b-cbaa-4702-b1df-2cf9c57f21d3.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_f42d16c0-8ba7-4410-a709-efaea5ba033e.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">7</strong>套</li>
+    </ul>
+    </a>
+    		<a id="1476" href="http://weixin.xfj100.com/wx_esf/saleIndex/1476" onclick="change_scroll(1476)">
+    <h3 class="text_ellipsis">海怡湾畔 6房  223.0平米</h3>
+    <h2>330-370万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_2639.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_e0a69f18-4115-47c9-899b-5273b9830e78.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_61a6a31f-92ae-4037-9a63-45c4e6ceeec3.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">7</strong>套</li>
+    </ul>
+    </a>
+    		<a id="4605" href="http://weixin.xfj100.com/wx_esf/saleIndex/4605" onclick="change_scroll(4605)">
+    <h3 class="text_ellipsis">鸿发山庄 6房  400平</h3>
+    <h2>1180-1220万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0711/detail_14903.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_9c3e20ed-3bb6-4496-a654-e0b6320fde24.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_c48450a4-45ff-4c49-b6aa-359e4da6e23b.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">7</strong>套</li>
+    </ul>
+    </a>
+    		<a id="5436" href="http://weixin.xfj100.com/wx_esf/saleIndex/5436" onclick="change_scroll(5436)">
+    <h3 class="text_ellipsis">湖中湖别墅 6房  200平</h3>
+    <h2>210-250万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_e276256f-570e-4332-9b37-4416e9af72f5.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0220/detail_425157.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_7da17772-afd6-4aeb-a052-611848462a0b.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">7</strong>套</li>
+    </ul>
+    </a>
+    		<a id="10280" href="http://weixin.xfj100.com/wx_esf/saleIndex/10280" onclick="change_scroll(10280)">
+    <h3 class="text_ellipsis">坦洲中澳新城御湖居 6房 333.23平米 简装</h3>
+    <h2>275-295万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/2016/0831/4616A1FC0CD5FCF76AED8BCEE450EA49.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/2016/0831/09A06B67E160539CB410E8032657BF9D.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/2016/0831/67A24B5353F227522EEDD00523E42A90.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">7</strong>套</li>
+    </ul>
+    </a>
+    		<a id="44667" href="http://weixin.xfj100.com/wx_esf/saleIndex/44667" onclick="change_scroll(44667)">
+    <h3 class="text_ellipsis">华发四季 6房  12.0平</h3>
+    <h2>560-600万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2017/0121/detail_180735.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_017e5e62-97c0-4aea-823e-399e495a0464.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_eebd8c86-539e-48b7-bf9c-1bdff7ebd737.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">7</strong>套</li>
+    </ul>
+    </a>
+    		<a id="1070" href="http://weixin.xfj100.com/wx_esf/saleIndex/1070" onclick="change_scroll(1070)">
+    <h3 class="text_ellipsis">时代廊桥 6房  268.0平米</h3>
+    <h2>460-500万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_1729.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_b3cac617-d574-4505-be43-1b48fb7c0c03.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_5f57e84b-c94f-454e-883c-cbc43e006511.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">6</strong>套</li>
+    </ul>
+    </a>
+    		<a id="2121" href="http://weixin.xfj100.com/wx_esf/saleIndex/2121" onclick="change_scroll(2121)">
+    <h3 class="text_ellipsis">华发水郡 6房  332.0平米</h3>
+    <h2>980-1020万</h2>
+    <ul>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaledetailphoto/2016/0621/detail_4383.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_63c877a1-a6ab-499e-8d29-8b4bbbd0d7c8.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	    	    	<li><img class="" data-original="http://image.xfj100.com//uploads/esfimages/esfsaleindexphoto/index_b651bed3-2e33-4ece-a85d-a0c1cd3f3285.jpg@120w_100Q_1x.jpg" src="./b3.jgp_files/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif"></li>
+	          <li><i></i>共<strong class="text_margin">6</strong>套</li>
+    </ul>
+    </a>
+    </div>
+		<input type="hidden" id="total" name="total" value="0">
+		<!-- 滚动顶部 -->
+		<a href="http://weixin.xfj100.com/wx_esf#0" class="cd-top  text_center"></a>
+	</div>
+	<a class="load_more" id="esf_foot"></a>
+<div class="footer"></div>
+<div id="footer" class="border-t">
+  <ul class="flex-wrap">
+    <li id="li1" class="active">首页</li>
+    <li id="li2">资讯</li>
+    <li id="li3">一键委托</li>
+    <li id="li4">活动</li>
+    <li id="li5">我的</li>
+  </ul>
+</div>
+<script>
+$(function() {
+	$('#li1').click(function(){
+		location.href="http://weixin.xfj100.com/wx_house";
+		});
+	$('#li2').click(function(){
+		location.href="http://weixin.xfj100.com/news";
+		});
+	$('#li3').click(function(){
+		location.href="http://weixin.xfj100.com/wx_esf/show_to_buy_view";
+		});
+	$('#li4').click(function(){
+		location.href="http://weixin.xfj100.com/lottery/lists";
+		});
+	$('#li5').click(function(){
+		location.href="http://weixin.xfj100.com/personal_center";
+		});
+});
+
+</script>
+
+
+<script type="text/javascript">
+$(function (){
+	 if(sessionStorage.cur_city!=756){
+		//城市切换清空缓存	 
+		 sessionStorage.esf_index_obj ='';
+		 sessionStorage.setItem('cur_city',756);
+	 }
+	//当页面被返回时获取页面缓存的信息
+	var str = sessionStorage.esf_index_obj;
+	if(str != undefined && str != ''){
+		$(".block_title").html('根据条件一共有<span id="show_num">'+sessionStorage.getItem("total")+'</span>套房源');
+		$("#view_list").append(str);
+		$(".lazy_img").lazyload({ //懒加载图片
+				 placeholder: "http://xfj-image.oss-cn-hangzhou.aliyuncs.com/uploads/2016/0412/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif",
+				 effect :"fadeIn",
+				 skip_invisible : false,
+				 threshold : 200,
+				 failure_limit : 10
+	   	});
+		$(".lazy_img").removeClass('lazy_img');
+
+		var div_id = sessionStorage.getItem("div_id");
+		if(div_id)
+		document.getElementById(div_id).scrollIntoView();
+
+		var area_id = $('#area_id').val();
+		var type_name = $('#type_name').val();
+		var house_num = $('#house_num').val();
+		var mian_num = $('#mian_num').val();
+		var price_num = $('#price_num').val();
+
+		$("[exec-name='li-find']").each(function(){
+			if($(this).attr('plus-param') == area_id){
+				$(".search_bg_color").attr("class", "");
+				$(this).html($(this).html());
+				$(this).attr("class", "search_bg_color");
+			}
+		});
+		$("[exec-name='type-find']").each(function(){
+			if($(this).attr('plus-param') == type_name){
+				$(".search_type_bg_color").attr("class", "");
+				$(this).html($(this).html());
+				$(this).attr("class", "search_type_bg_color");
+			}
+		});
+		$("[exec-name='house-find']").each(function(){
+			if($(this).attr('plus-param') == house_num){
+				$(".search_house_bg_color").attr("class", "");
+				$(this).html($(this).html());
+				$(this).attr("class", "search_house_bg_color");
+			}
+		});
+		$("[exec-name='mian-find']").each(function(){
+			if($(this).attr('plus-param') == mian_num){
+				$(".search_mian_bg_color").attr("class", "");
+				$(this).html($(this).html());
+				$(this).attr("class", "search_mian_bg_color");
+			}
+		});
+		$("[exec-name='price-find']").each(function(){
+			if($(this).attr('plus-param') == price_num){
+				$(".search_price_bg_color").attr("class", "");
+				$(this).html($(this).html());
+				$(this).attr("class", "search_price_bg_color");
+			}
+		});
+		
+		return;
+	}else{loadingAjax_esf();}
+	sessionStorage.esf_index_obj = '';
+});
+
+have_date = 0;
+//区域选择
+$("[exec-name='li-find']").click(function() {
+	sessionStorage.esf_index_obj = '';
+	$("#view_list").empty();
+	$('#page').val(0);
+	$('#show_num').html(0);
+	flag = true;
+	have_date = 1;
+	$(".search_bg_color").attr("class", "");
+	$(this).html($(this).html());
+	$(this).attr("class", "search_bg_color");
+	$('#area_id').val($(this).attr('plus-param'));
+	//sessionStorage.setItem("area_id",$('#area_id').val());
+	loadingAjax_esf();
+});
+//类型选择
+$("[exec-name='type-find']").click(function() {
+	sessionStorage.esf_index_obj = '';
+	$("#view_list").empty();
+	$('#page').val(0);
+	have_date = 1;
+	$('#show_num').html(0);
+	flag = true;
+	$(".search_type_bg_color").attr("class", "");
+	$(this).html($(this).html());
+	$(this).attr("class", "search_type_bg_color");
+	$('#type_name').val($(this).attr('plus-param'));
+	//sessionStorage.setItem("type_name",$('#type_name').val());
+	loadingAjax_esf();
+});
+//户型选择
+$("[exec-name='house-find']").click(function() {
+	sessionStorage.esf_index_obj = '';
+	$("#view_list").empty();
+	$('#page').val(0);
+	have_date = 1;
+	$('#show_num').html(0);
+	flag = true;
+	$(".search_house_bg_color").attr("class", "");
+	$(this).html($(this).html());
+	$(this).attr("class", "search_house_bg_color");
+	$('#house_num').val($(this).attr('plus-param'));
+	//sessionStorage.setItem("house_num",$('#house_num').val());
+	loadingAjax_esf();
+});
+//面积选择
+$("[exec-name='mian-find']").click(function() {
+	sessionStorage.esf_index_obj = '';
+	$("#view_list").empty();
+	$('#page').val(0);
+	have_date = 1;
+	$('#show_num').html(0);
+	flag = true;
+	$(".search_mian_bg_color").attr("class", "");
+	$(this).html($(this).html());
+	$(this).attr("class", "search_mian_bg_color");
+	$('#mian_num').val($(this).attr('plus-param'));
+	//sessionStorage.setItem("mian_num",$('#mian_num').val());
+	loadingAjax_esf();
+});
+//总价选择
+$("[exec-name='price-find']").click(function() {
+	sessionStorage.esf_index_obj = '';
+	$("#view_list").empty();
+	$('#page').val(0);
+	have_date = 1;
+	$('#show_num').html(0);
+	flag = true;
+	$(".search_price_bg_color").attr("class", "");
+	$(this).html($(this).html());
+	$(this).attr("class", "search_price_bg_color");
+	$('#price_num').val($(this).attr('plus-param'));
+	//sessionStorage.setItem("price_num",$('#price_num').val());
+	loadingAjax_esf();
+});
+var loadingState = true;
+function loadingAjax_esf() {
+
+	var area_id = $('#area_id').val();
+	var type_name = $('#type_name').val();
+	var house_num = $('#house_num').val();
+	var mian_num = $('#mian_num').val();
+	var price_num = $('#price_num').val();
+	var key_word = $.trim($("#key_word").val());
+	if(key_word == '输入关键字')key_word = '';
+	
+	$.ajax({
+		type: "post",
+		url: "http://weixin.xfj100.com/wx_esf/turn_list_view",
+		dataType: "json",
+		data: { "page": $('#page').val() * 6,"page_limit": 6,"area_name":area_id,"type_name":type_name,"house_num":house_num,"mian_num":mian_num,"price_num":price_num,"keyword":key_word},
+		beforeSend: function () {
+	        // 禁用按钮防止重复提交
+	        $('#esf_foot').html('加载中....');
+	        $('.block_title').html('');
+	        $('.block_title').hide();
+	     },
+		success: function(data) {
+			if(data.list_view!=''){
+				loadingState = true;
+	    			$("#view_list").append(data.list_view);
+	    			$('.block_title').html('根据条件一共有<span id="show_num">'+data.total+'</span>套房源');
+	    			$('.block_title').show();
+	    			$('#page').val(parseInt($('#page').val()) + 1);
+	    			sessionStorage.setItem("total",data.total);
+	    			$(".lazy_img").lazyload({ //懒加载图片
+	    				 placeholder: "http://xfj-image.oss-cn-hangzhou.aliyuncs.com/uploads/2016/0412/d4460070-a8ee-4141-b9a1-8bcfe654a8a8.gif",
+	    				 effect :"fadeIn",
+	    				 skip_invisible : false,
+	    				 threshold : 200,
+	    				 failure_limit : 10
+	    	     	});
+	    			$(".lazy_img").removeClass('lazy_img');
+	    			if(data.total==0 && have_date == 0){
+	    				var html='<div class="fu_tin">小秘正在整理楼盘词典<br>二手房功能即将开放<br><strong>敬请期待！</strong></div>'+
+	    					'<img src="http://xfj-image.oss-cn-hangzhou.aliyuncs.com/uploads/2015/1029/1446115384348055567.png"" style=" width:100px; height:auto; display:block; margin:0 auto;">';
+	    				$('#esf_date_content').html(html);
+	    			}else{
+	    				var str = JSON.stringify(data.list_view);
+		    			//存入 
+		    			sessionStorage.esf_index_obj = sessionStorage.esf_index_obj+jQuery.parseJSON(str);
+		    		}
+			}else{
+				$('#esf_foot').html('<div id="emptytip" class="empty-page half-empty" ><img src="http://xfj-image.oss-cn-hangzhou.aliyuncs.com/uploads/2016/1104/d86d0c4c-c014-453d-ba68-21b63d83c38c.png" ><p>您的小秘没能找到相关信息</p></div>');
+			}
+		},
+		error:function(){
+			$('#esf_foot').html('<div id="emptytip" class="empty-page half-empty" ><img src="http://xfj-image.oss-cn-hangzhou.aliyuncs.com/uploads/2016/1104/d86d0c4c-c014-453d-ba68-21b63d83c38c.png" ><p>您的小秘没能找到相关信息</p></div>');
+		}
+	});
+}
+//搜索方法
+function serach_info(){
+	sessionStorage.esf_index_obj = '';
+	$("#view_list").empty();
+	$('#page').val(0);
+	have_date = 1;
+	$('#show_num').html(0);
+	loadingAjax_esf();
+}
+//条件处理
+function change_view(){
+	if($('#search_info').hasClass('box_up'))
+		{$('.box').removeClass('box_up');$('#flod_text').html('<span><i class="up_icon"></i>收起更多</span>');}
+	else {$('.box').addClass('box_up');$('#flod_text').html('<span><i class="down_icon"></i>查看更多</span>');}
+}
+//记录滚动方法
+$(window).scroll(function() {
+	//滚动到底部时的操作
+	if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+		var t = parseInt($('#show_num').html());
+		if ((parseInt($('#page').val()) * 6) < t) {
+			if(loadingState){
+				loadingAjax_esf();
+				loadingState = false;
+			}
+		} else if (t == 0) {
+			$('.block_title').hide();
+			$('#esf_foot').html('<div id="emptytip" class="empty-page half-empty" ><img src="http://xfj-image.oss-cn-hangzhou.aliyuncs.com/uploads/2016/1104/d86d0c4c-c014-453d-ba68-21b63d83c38c.png" ><p>您的小秘没能找到相关信息</p></div>');
+		} else if ((parseInt($('#page').val()) * 6) >= t) {
+			$('#esf_foot').html('好像没有了！');
+			setTimeout(function () {$("#esf_foot").hide();}, 3000);
+		}
+	}
+})
+
+//记录点击后的锚点
+function change_scroll(div_id){
+	//记录浏览位置
+	if(window.sessionStorage){
+		sessionStorage.setItem("div_id",div_id);
+	}
+}
+
+</script>
+<!-- weixin.xfj100.com 百度统计异步代码 -->
+<script type="text/javascript" src="./b3.jgp_files/baidu.js.下载"></script>
+</body></html>

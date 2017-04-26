@@ -1,0 +1,89 @@
+/**
+ * 用原生JS对“微信分享”做简单封装 
+ */
+
+// 初始化核心函数
+// 分享标题 conf.title;
+// 分享内容 conf.desc;
+// 分享图片 conf.img;
+// 分享连接 conf.link;
+// 回调函数可选 conf.success;
+var conf = null;
+var initShare = function(c) {
+
+	conf = c;
+	// 是否是微信浏览器
+	if (!navigator.userAgent.match('MicroMessenger')) {
+		console.log("当前浏览器不是微信浏览器");
+		return;
+	} else {
+		wx.ready(function() {
+			// 在这里调用 API
+			// 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+			wx.onMenuShareAppMessage({
+				title : conf.title,
+				desc : conf.desc,
+				link : conf.link,
+				imgUrl : conf.img,
+				success : function(res) {
+					conf.success(res);					
+				},
+				cancel : function(res) {
+					conf.cancel(res);
+				},
+				fail : function(res) {
+					conf.fail(res);
+				}
+			});
+			if(conf.own)conf.desc = conf.title;//分享到朋友圈时摘要取标题信息
+			// 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+			wx.onMenuShareTimeline({
+				title : conf.desc, //朋友圈只会显示标题，所以放入内容
+				desc : conf.desc,
+				link : conf.link,
+				imgUrl : conf.img,
+				success : function(res) {
+					conf.success(res);					
+				},
+				cancel : function(res) {
+					conf.cancel(res);
+				},
+				fail : function(res) {
+					conf.fail(res);
+				}
+			});
+			// 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+			wx.onMenuShareQQ({
+				title : conf.title,
+				desc : conf.desc,
+				link : conf.link,
+				imgUrl : conf.img,
+				success : function(res) {
+					conf.success(res);
+				},
+				cancel : function(res) {
+					conf.cancel(res);
+				},
+				fail : function(res) {
+					conf.fail(res);
+				}
+			});
+			// 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+			wx.onMenuShareWeibo({
+				title : conf.title,
+				desc : conf.desc,
+				link : conf.link,
+				imgUrl : conf.img,
+				success : function(res) {
+					conf.success(res);					
+				},
+				cancel : function(res) {
+					conf.cancel(res);
+				},
+				fail : function(res) {
+					conf.fail(res);
+				}
+			});
+		});
+	}
+};
